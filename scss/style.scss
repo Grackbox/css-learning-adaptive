@@ -131,6 +131,7 @@ button {
   @media (max-width: 479px) {
     &__link {
       font-size: 18px;
+      color: #3e3e3e;
     }
   }
 }
@@ -154,6 +155,12 @@ button {
     position: relative;
     max-width: 400;
   }
+
+  @media (max-width: 992px) {
+    &__body {
+      padding: 100px 0px 191px 0px;
+    }
+  }
   &__body > *:not(:last-child) {
     margin: 0px 0px 35px 0px;
   }
@@ -164,12 +171,23 @@ button {
     line-height: 138%;
     letter-spacing: 0.2px;
   }
+  @media (max-width: 479px) {
+    &__title {
+      font-size: 42px;
+    }
+  }
 
   &__text {
     color: #737373;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 0.2px;
+  }
+
+  @media (max-width: 992px) {
+    &__text {
+      color: #3e3e3e;
+    }
   }
 
   &__buttons {
@@ -186,6 +204,7 @@ button {
     justify-content: center;
     align-items: center;
     padding: 5px 36px;
+    margin: 10px 0;
     border-radius: 37px;
     text-align: center;
     transition: all 0.3s ease 0s;
@@ -200,9 +219,18 @@ button {
       border-color: #ff7b47;
     }
   }
-  &__button:not(:last-child) {
-    margin: 0 10px 0 0;
+  @media (max-width: 479px) {
+    &__button {
+      flex: 1 1 100%;
+    }
   }
+
+  @media (min-width: 479px) {
+    &__button:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
   &__image {
     position: absolute;
     width: 100%;
@@ -214,6 +242,187 @@ button {
     &__image img {
       object-position: right;
     }
+  }
+  @media (max-width: 992px) {
+    &__image {
+      opacity: 0.5;
+    }
+  }
+}
+// services ------------------------------------------
+.page {
+  &__services {
+  }
+}
+.services {
+  &__countainer {
+  }
+
+  &__body {
+    margin-top: -112px;
+  }
+
+  &__column {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 696px) {
+    &__column {
+      flex-direction: column-reverse;
+    }
+  }
+  @media (max-width: 1080px) {
+    &__column {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    background-color: #ffffff;
+
+    &__reversce {
+      background-color: #0d5c63;
+      color: #ffffff;
+    }
+  }
+}
+
+.item-service {
+  max-width: 328px;
+  z-index: 2;
+  box-shadow: 0px 13px 19px #00000012;
+  &__icon {
+    padding: 40px 0 10px 40px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    padding: 0 40px 10px 40px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    padding: 0 40px 35px 40px;
+    color: #737373;
+    &__reversce {
+      color: #ffffff;
+    }
+  }
+}
+.item-service:not(:last-child) {
+  margin-right: 30px;
+}
+@media (max-width: 1080px) {
+  .item-service {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 258px;
+    z-index: 2;
+
+    &__icon {
+      padding: 30px 0 10px 30px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 32px;
+      padding: 0 30px 10px 30px;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 20px;
+      padding: 0 30px 35px 30px;
+    }
+  }
+
+  .item-service:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 697px) and (max-width: 843px) {
+  .item-service {
+    max-width: 47%;
+  }
+  .item-service:last-child {
+    margin-top: 20px;
+    margin-right: 20px;
+    min-width: 100%;
+    display: flex;
+    z-index: 2;
+    flex-wrap: wrap;
+    .item-service {
+      &__icon {
+        padding: 15px 0 10px 20px;
+      }
+      &__icon img {
+        height: 30px;
+      }
+
+      &__title {
+        text-align: center;
+        width: 80%;
+        font-size: 20px;
+        line-height: 32px;
+
+        padding: 15px 10px 10px 20px;
+      }
+
+      &__text {
+        text-align: center;
+        width: 100%;
+        font-size: 12px;
+        line-height: 20px;
+
+        padding: 0 20px 15px 20px;
+      }
+    }
+  }
+}
+@media (max-width: 696px) {
+  .item-service {
+    display: flex;
+    min-width: 100%;
+    z-index: 2;
+    flex-wrap: wrap;
+
+    &__icon {
+      padding: 15px 0 10px 20px;
+    }
+    &__icon img {
+      height: 30px;
+    }
+
+    &__title {
+      text-align: center;
+      width: 80%;
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: 0.1px;
+      padding: 15px 10px 10px 20px;
+    }
+
+    &__text {
+      text-align: center;
+      width: 100%;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.1px;
+      padding: 0 20px 15px 20px;
+    }
+  }
+  .item-service:not(:last-child) {
+    margin-right: 0px;
+    background-color: #c9f0fb;
+  }
+  .item-service:not(:first-child) {
+    margin-bottom: 10px;
   }
 }
 
